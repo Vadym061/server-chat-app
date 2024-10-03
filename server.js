@@ -34,6 +34,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the Chat API!');
+});
+
 // Initialize WebSocket Server
 const wss = new WebSocketServer({ noServer: true });
 
